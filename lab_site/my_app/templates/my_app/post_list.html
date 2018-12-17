@@ -1,0 +1,38 @@
+<html>
+        {% load static %}
+<head>
+    <title>Прикладное ПО 1</title>
+    <img src={% static "imgg/l.jpg" %}>
+    <link rel="stylesheet" href="{% static 'css/app.css'%}">
+</head>
+
+<body>
+    <div>
+        <h1>
+            <a1 href="/">PO NEWS</a1>
+        </h1>
+    </div>
+    <br />
+    <br />
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p1>Создано: {{ post.сreated_date }}</p1>
+                        <p2></div>
+                    <h2>
+                        <a href="">{{ post.title }}</a>
+                    </h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            </p2>
+            
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
